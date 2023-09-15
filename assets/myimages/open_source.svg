@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.891" height="25.589" viewBox="0 0 26.891 25.589">
+  <g id="Group_1041" data-name="Group 1041" transform="translate(-51.554 -526.206)">
+    <g id="Group_972" data-name="Group 972">
+      <circle id="Ellipse_88" data-name="Ellipse 88" cx="1.5" cy="1.5" r="1.5" transform="translate(72 530)" fill="#006cb5"/>
+      <circle id="Ellipse_90" data-name="Ellipse 90" cx="1.5" cy="1.5" r="1.5" transform="translate(55 545)" fill="#006cb5"/>
+      <line id="Line_22" data-name="Line 22" y1="15" x2="17" transform="translate(56.5 531.5)" fill="none" stroke="#006cb5" stroke-width="0.6"/>
+    </g>
+    <g id="Group_973" data-name="Group 973" transform="translate(55 530)">
+      <circle id="Ellipse_88-2" data-name="Ellipse 88" cx="1.5" cy="1.5" r="1.5" fill="#006cb5"/>
+      <circle id="Ellipse_90-2" data-name="Ellipse 90" cx="1.5" cy="1.5" r="1.5" transform="translate(17 15)" fill="#006cb5"/>
+      <line id="Line_22-2" data-name="Line 22" x1="17" y1="15" transform="translate(1.5 1.5)" fill="none" stroke="#006cb5" stroke-width="0.6"/>
+    </g>
+    <g id="Group_974" data-name="Group 974" transform="translate(60.84 526.206) rotate(30)">
+      <circle id="Ellipse_88-3" data-name="Ellipse 88" cx="1.5" cy="1.5" r="1.5" fill="#006cb5"/>
+      <circle id="Ellipse_90-3" data-name="Ellipse 90" cx="1.5" cy="1.5" r="1.5" transform="translate(17 15)" fill="#006cb5"/>
+      <line id="Line_22-3" data-name="Line 22" x1="17" y1="15" transform="translate(1.5 1.5)" fill="none" stroke="#006cb5" stroke-width="0.6"/>
+    </g>
+    <g id="Group_975" data-name="Group 975" transform="translate(78.16 541.794) rotate(150)">
+      <ellipse id="Ellipse_88-4" data-name="Ellipse 88" cx="1.5" cy="1.5" rx="1.5" ry="1.5" transform="translate(0 15)" fill="#006cb5"/>
+      <ellipse id="Ellipse_90-4" data-name="Ellipse 90" cx="1.5" cy="1.5" rx="1.5" ry="1.5" transform="translate(17 0)" fill="#006cb5"/>
+      <line id="Line_22-4" data-name="Line 22" x1="17" y2="15" transform="translate(1.5 1.5)" fill="none" stroke="#006cb5" stroke-width="0.6"/>
+    </g>
+    <g id="Group_976" data-name="Group 976" transform="translate(63.125 525.678) rotate(40)">
+      <ellipse id="Ellipse_88-5" data-name="Ellipse 88" cx="1.5" cy="1.5" rx="1.5" ry="1.5" transform="translate(0 15)" fill="#006cb5"/>
+      <ellipse id="Ellipse_90-5" data-name="Ellipse 90" cx="1.5" cy="1.5" rx="1.5" ry="1.5" transform="translate(17 0)" fill="#006cb5"/>
+      <line id="Line_22-5" data-name="Line 22" x1="17" y2="15" transform="translate(1.5 1.5)" fill="none" stroke="#006cb5" stroke-width="0.6"/>
+    </g>
+    <circle id="Ellipse_87" data-name="Ellipse 87" cx="6.5" cy="6.5" r="6.5" transform="translate(59 533)" fill="#006cb5"/>
+    <text id="C" transform="translate(63 542)" fill="#fff" font-size="7" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">C</tspan></text>
+  </g>
+</svg>

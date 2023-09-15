@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_229_1068)">
+<path d="M354.32 206.84L256 108.52L157.68 206.84V501.801H354.32V206.84Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.1992 272.39L75.7495 206.84H157.68V272.39H10.1992Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M501.801 272.39L436.251 206.84H354.32V272.39H501.801Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92.1294 419.871V436.251" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M419.871 419.871V436.251" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92.1294 337.93V354.32" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M419.871 337.93V354.32" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M223.23 337.93V354.32" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M288.77 337.93V354.32" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M223.23 501.801H288.77V419.871H223.23V501.801Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.5894 501.801H157.68V272.391H26.5894V501.801Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.32 501.801H485.411V272.391H354.32V501.801Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M256 206.84C262.484 206.838 268.823 208.759 274.216 212.36C279.608 215.961 283.811 221.081 286.293 227.071C288.776 233.061 289.426 239.653 288.161 246.013C286.897 252.372 283.774 258.214 279.189 262.799C274.604 267.384 268.763 270.506 262.403 271.771C256.043 273.035 249.451 272.385 243.461 269.903C237.471 267.421 232.351 263.218 228.75 257.825C225.149 252.433 223.228 246.094 223.23 239.61C223.233 230.92 226.686 222.586 232.831 216.441C238.976 210.296 247.31 206.843 256 206.84Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M256 108.52V10.1992" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M256 75.7495H354.32V10.1992H256V75.7495Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_229_1068">
+<rect width="512" height="512" fill="white"/>
+</clipPath>
+</defs>
+</svg>

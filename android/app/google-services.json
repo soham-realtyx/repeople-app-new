@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "875205703552",
+    "project_id": "totality-repeople",
+    "storage_bucket": "totality-repeople.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875205703552:android:5f3157448f9d37f19eb365",
+        "android_client_info": {
+          "package_name": "com.totality.repeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875205703552-60k7irpep4qmm2fvsqbjojqshb692slm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.totality.repeople",
+            "certificate_hash": "78222dea216e2c3358d75027c8e800aea5739e2d"
+          }
+        },
+        {
+          "client_id": "875205703552-bkh1lku1ek1iscajrgnbmk44qsodlnbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTM8PvykdBpqeO3Gs8klZM4BRvrW2Ef3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875205703552-bkh1lku1ek1iscajrgnbmk44qsodlnbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
