@@ -211,7 +211,7 @@ MaterialColor PURPALCOLOR = hex("B787FC");
 MaterialColor LIGHTBLUE_COLOR = hex("73DEF3");
 MaterialColor LIGHTPINK_COLOR = hex("F683C6");
 MaterialColor BLUE = hex("6495ED");
-MaterialColor BORDER_GREY = hex("e8e8e8");
+  MaterialColor BORDER_GREY = hex("e8e8e8");
 MaterialColor NEWINDICATOR_GREY = hex("4B465C");
 MaterialColor REFERRAL_ICON_BG = hex("F5F6FA");
 

@@ -57,7 +57,7 @@ class ProjectController extends GetxController {
   // Rx Variable Declaration
   RxInt _loadMore = 0.obs;
   RxInt _pageCount = 1.obs;
-  RxInt isTreding = 0.obs;
+  RxInt isTrending = 0.obs;
   RxBool islogin = false.obs;
 
   @override

@@ -271,20 +271,20 @@ class BottomNavigatorController extends GetxController {
     }
   }
 
-  GotoPropertiesPage() async {
-    if(roleCode == GUEST_USER_ROLE_CODE){
-      OpenGusetUserRestricationDialog();
-    }else{
-      var index = await Get.to(
-        ProjectListPage(),
-        duration: Duration.zero,
-      )?.then((value) => selectedIndex.value=0);
+    GotoPropertiesPage() async {
+      if(roleCode == GUEST_USER_ROLE_CODE){
+        OpenGusetUserRestricationDialog();
+      }else{
+        var index = await Get.to(
+          ProjectListPage(),
+          duration: Duration.zero,
+        )?.then((value) => selectedIndex.value=0);
 
-      if (index != null) {
-        SelectIndex(index);
+        if (index != null) {
+          SelectIndex(index);
+        }
       }
     }
-  }
 
   GotoMyProfilePage() async {
     MoengageAnalyticsHandler().track_event("profile_page");
@@ -322,12 +322,12 @@ class BottomNavigatorController extends GetxController {
         return ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, i) {
             return  Obx(() => _generateNavigationCell1(i));
             // return  Obx(() => _generateNavigationCellnew(i));
           },
-          itemCount: arrBottomNavigationList.length > 0 ? arrBottomNavigationList.length : 0,
+          itemCount: arrBottomNavigationList.isNotEmpty ? arrBottomNavigationList.length : 0,
         );
       })
     );
@@ -447,7 +447,7 @@ class BottomNavigatorController extends GetxController {
         Container(
         width: Get.width / 5,
         height: 40,
-        padding: EdgeInsets.all(/*selectedIndex.value == index ? 10 : */15),
+        padding: const EdgeInsets.all(/*selectedIndex.value == index ? 10 : */15),
         child: Stack(
           children: [
             Column(

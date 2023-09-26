@@ -42,9 +42,9 @@ class _ProjectListPageState extends State<ProjectListPage> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       cntProjectList.trendingList.clear();
-      cntProjectList.isTreding.value=0;
+      cntProjectList.isTrending.value=0;
       cntProjectList.trendingList.clear();
-      cntProjectList.isTreding.value = cntProjectList.trendingList.length-1;
+      cntProjectList.isTrending.value = cntProjectList.trendingList.length-1;
 
       BottomNavigationBarClass().selectedIndex=1;
       cntProjectList.futurearrprojectlist.value = cntProjectList.RetrieveProjectData();
@@ -262,7 +262,7 @@ class _ProjectListPageState extends State<ProjectListPage> {
               if(i==0){
                 return  GestureDetector(
                   onTap: (){
-                    cntProjectList.isTreding.value = i-1;
+                    cntProjectList.isTrending.value = i-1;
                     cntProjectList.futurearrprojectlist.value=cntProjectList.RetrieveProjectData(trendingName: "false");
                   },
                   child: Row(
@@ -295,14 +295,14 @@ class _ProjectListPageState extends State<ProjectListPage> {
   Widget _trendingChildList(int i){
     return GestureDetector(
       onTap: (){
-        cntProjectList.isTreding.value = i;
+        cntProjectList.isTrending.value = i;
         cntProjectList.onSearchTextChanged(cntProjectList.trendingList[i].toString());
         cntProjectList.futurearrprojectlist.refresh();
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
         decoration: BoxDecoration(
-          color: cntProjectList.isTreding.value==i?DARK_BLUE:null,
+          color: cntProjectList.isTrending.value==i?DARK_BLUE:null,
           borderRadius: const BorderRadius.all(Radius.circular(4)),
           border:  Border.all(
             color: gray_color_1,
@@ -317,13 +317,13 @@ class _ProjectListPageState extends State<ProjectListPage> {
               child: Text(
                 capitalizeFirstLetter(cntProjectList.trendingList[i].toString()),
                 style: TextStyle(
-                    color: cntProjectList.isTreding.value==i?white:gray_color_1,
+                    color: cntProjectList.isTrending.value==i?white:gray_color_1,
                     fontWeight: FontWeight.w500,
                     fontSize: 12.0,
                     fontFamily: fontFamily),
               ),
             ),
-            SvgPicture.asset(IMG_RIGHR_ARROW_SVG_NEW_2,color: cntProjectList.isTreding.value==i?white:gray_color_1,)
+            SvgPicture.asset(IMG_RIGHR_ARROW_SVG_NEW_2,color: cntProjectList.isTrending.value==i?white:gray_color_1,)
           ],
         ),
       ),

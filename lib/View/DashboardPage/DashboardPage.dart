@@ -1419,7 +1419,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           .backgroundlocal(APP_THEME_COLOR, 6, 0, APP_THEME_COLOR),
                       text: lblBookASiteText2,
                       icon: Image.asset(cntDash.openContainer.value == true ?UP_ARROW_IMAGE:DOWN_ARROW_IMAGE,width: 12,height: 15,color: AppColors.WHITE),
-                      style: TextStyle(color: white, fontSize: 10.sp,fontFamily: fontFamily, fontWeight: FontWeight.w500)),
+                      style: TextStyle(color : white, fontSize: 10.sp,fontFamily: fontFamily, fontWeight: FontWeight.w500)),
 
                   cntDash.openContainer.value == true ? Container() : siteVisitTheme(false),
                   SizedBox(height: 22.h),

@@ -7,9 +7,7 @@ import 'package:android_play_install_referrer/android_play_install_referrer.dart
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:Repeople/View/LoginPage/LoginPage.dart';
 import 'package:Repeople/View/ManagerScreensFlow/ManagerDashboardScreens/ManagerDashBoardScreen.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';

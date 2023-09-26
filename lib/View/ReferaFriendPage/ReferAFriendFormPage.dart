@@ -288,7 +288,7 @@ class _ReferAFriendFormPageState extends State<ReferAFriendFormPage> {
                       cnt_ReferFriendForm.CategoryOption?.value = CategorySelect.Residential;
                     },
                     child: Container(
-                      padding: EdgeInsets.all(5.5),
+                      padding: const EdgeInsets.all(5.5),
                       decoration: BoxDecoration(
                           border:
                           Border.all(width: 1.5, color: DARK_BLUE),

@@ -168,52 +168,6 @@ class NotificationHandler {
     await flutterLocalNotificationsPlugin.show(notification.hashCode, notification.title, notification.body, notificationDetails,
         payload: jsonEncode(playload),);
   }
-  //   showNotification_Awosome(RemoteNotification notification ,/*Map<String,String> playload*/) async {
-  //   try{
-  //     AwesomeNotifications().createNotification(
-  //         content: NotificationContent(
-  //             roundedLargeIcon: true,//simgple notification
-  //             id: 123,
-  //             channelKey: 'basic', //set configuration wuth key "basic"
-  //             title: notification.title,
-  //             body: notification.body,
-  //             notificationLayout:NotificationLayout.Default ,
-  //             displayOnBackground: true,
-  //             backgroundColor:APP_THEME_COLOR ,
-  //             fullScreenIntent: true,
-  //             locked: false,
-  //             progress: 10,
-  //             //  payload: playload,
-  //
-  //             //payload: {"name":"FlutterCampus"},
-  //             autoDismissible: true,
-  //             ticker: "123"
-  //           //color: Colors.pink
-  //         ),
-  //         actionButtons: [
-  //           NotificationActionButton(
-  //             key: "View",
-  //             label: "View",
-  //
-  //             // color: Color(0xff063970),
-  //             // enabled: true
-  //           ),
-  //           // NotificationActionButton(
-  //           //   key: "delete",
-  //           //   label: "Delete File",
-  //           // )
-  //         ]
-  //     );
-  //
-  //   }
-  //   catch(ex){
-  //     lst.add("erroe in custom messageeee");
-  //     lst.add(ex.toString());
-  //     exception.value=ex.toString();
-  //     exception.update((val) {});
-  //   }
-  //
-  // }
 
   showBigNotification(RemoteNotification notification,Map<String,dynamic> playload,String url)async{
 
@@ -244,43 +198,6 @@ class NotificationHandler {
         payload: jsonEncode(playload));
 
   }
-  /*showBigNotification_Awosome(RemoteNotification notification,*//*Map<String,String> playload,*//*String url)async{
-    AwesomeNotifications().createNotification(
-      content: NotificationContent(
-          roundedLargeIcon: true,//simgple notification
-          id: 123,
-          channelKey: 'basic', //set configuration wuth key "basic"
-          title: notification.title,
-          body: notification.body,
-          notificationLayout:NotificationLayout.BigPicture,
-          displayOnBackground: true,
-
-          backgroundColor:APP_THEME_COLOR ,
-          fullScreenIntent: true,
-          locked: false,
-          //payload: playload,
-          bigPicture:url,
-          //payload: {"name":"FlutterCampus"},
-          autoDismissible: true,
-          ticker: "123"
-        //color: Colors.pink
-      ),
-      actionButtons: [
-                          NotificationActionButton(
-                            key: "View",
-                            label: "View",
-
-                            // color: Color(0xff063970),
-                            // enabled: true
-                          ),
-                          // NotificationActionButton(
-                          //   key: "delete",
-                          //   label: "Delete File",
-                          // )
-                        ]
-    );
-
-  }*/
   Future<Uint8List> _getByteArrayFromUrl(String url) async {
 
     dio.Options options = dio.Options(responseType: dio.ResponseType.bytes);
@@ -288,26 +205,6 @@ class NotificationHandler {
     dio.Response response = await d.getUri(Uri.parse(url),options: options);
     return response.data;
   }
-
-  // initAwesomeNotification(){
-  //   AwesomeNotifications().initialize('resource://drawable/logo', [
-  //     NotificationChannel(channelKey: "default", channelName: "default", channelDescription: "NoticeBoard channel for basic tests")
-  //   ],debug: true);
-  // }
-  //
-  // showActionButtonNotification(){
-  //   AwesomeNotifications().createNotification(
-  //     content: NotificationContent(id: 10, channelKey: "default",title: "Testing",body: "Testing Button NoticeBoard",),
-  //     actionButtons: [
-  //       NotificationActionButton(key: "done", label: "Done",color: AppColors.DARK_ORANGE),
-  //       NotificationActionButton(key: "cancel", label: "Cancel",)
-  //     ]
-  //   );
-  //
-  //   AwesomeNotifications().actionStream.listen((event) {
-  //     print(event.buttonKeyPressed);
-  //   });
-  // }
 
   Future<String> DownloadFile(String printurl) async {
     Dio dio = Dio();
