@@ -555,108 +555,108 @@ Widget Sf_SliderIndicator({
   Widget? editwidget,
 
 }){
-  return Container(
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0,left: 0,right: 0,bottom: 0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                title??"",
-                style: TextStyle(fontWeight: FontWeight.w600,fontFamily: fontFamily,fontSize: 10.sp,color: LIGHT_GREY_COLOR),
-              ),
-              if(edit_option&&editwidget != null) editwidget
-            ],
-          ),
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Padding(
+        padding: const EdgeInsets.only(top: 10.0,left: 20,right: 20,bottom: 0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title??"",
+              style: TextStyle(fontWeight: FontWeight.w600,fontFamily: fontFamily,fontSize: 10.sp,color: LIGHT_GREY_COLOR),
+            ),
+            if(edit_option&&editwidget != null) editwidget
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 7.0,top: 10),
-          child: Container(
-            // width: width,
-            // color: Colors.green,
-            child:  SfSliderTheme(
-              data: SfSliderThemeData(
-                thumbRadius: 5.5,
-                thumbStrokeWidth: 1.9,
-                thumbStrokeColor: white,
-                activeDividerColor: DARK_BLUE,
-                activeTrackColor: APP_THEME_COLOR,
-                thumbColor: APP_THEME_COLOR,
-                inactiveDividerColor: AppColors.BLACK,
-                // activeDividerStrokeWidth: 100,
-                overlayColor: AppColors.TRANSPARENT,
-                activeTrackHeight: 4.h,
-                activeLabelStyle: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontFamily: fontFamily,
-                    fontSize: 9.sp,
-                    color: gray_color_1
-                ),
-                inactiveLabelStyle: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontFamily: fontFamily,
-                    fontSize: 9.sp,
-                    color: gray_color_1
-                ),
-                tooltipTextStyle: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontFamily: fontFamily,
-                    fontSize: 9.sp,
-                    color: new_black_color
-                ),
-                tooltipBackgroundColor: hex("4B465C").shade900.withOpacity(0.3),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(bottom: 7.0,top: 10),
+        child: Container(
+          // width: width,
+          // color: Colors.green,
+          child:  SfSliderTheme(
+            data: SfSliderThemeData(
+              thumbRadius: 5.5,
+              thumbStrokeWidth: 1.9,
+              thumbStrokeColor: white,
+              activeDividerColor: DARK_BLUE,
+              activeTrackColor: APP_THEME_COLOR,
+              thumbColor: APP_THEME_COLOR,
+              inactiveDividerColor: AppColors.BLACK,
+              // activeDividerStrokeWidth: 100,
+              overlayColor: AppColors.TRANSPARENT,
+              activeTrackHeight: 4.h,
+
+              activeLabelStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontFamily: fontFamily,
+                  fontSize: 9.sp,
+                  color: gray_color_1
               ),
-              child: Container(
-                width: width,
-                height: height,
-                child: SliderTheme(
-                  data: SliderTheme.of(Get.context!).copyWith(
-                    overlayShape: SliderComponentShape.noThumb,
-                    trackHeight: 1
-                  ),
-                  child: SfSlider(
-                          value: value,
-                          min: min,
-                          max: max,
-                          showTicks:showTicks,
-                          showLabels:showLabels,
-                          onChanged: onChanged,
-                          stepSize: stepSize,
-                          stepDuration: stepDuration,
-                          interval: interval,
-                          thumbShape: thumbShape,
-                          inactiveColor: inactiveColor,
-                          activeColor: activeColor,
-                          dateFormat: dateFormat,
-                          dateIntervalType: dateIntervalType,
-                          edgeLabelPlacement: EdgeLabelPlacement.auto,
-                        enableTooltip: enableTooltip,
-                        numberFormat: numberFormat,
-                       dividerShape: dividerShape,
-                    labelFormatterCallback: labelFormatterCallback,
-                    labelPlacement: labelPlacement,
-                    minorTicksPerInterval: minorTicksPerInterval,
-                    semanticFormatterCallback: semanticFormatterCallback,
-                    overlayShape: overlayShape,
-                    shouldAlwaysShowTooltip: shouldAlwaysShowTooltip,
-                    showDividers: showDividers,
-                    thumbIcon: thumbIcon,
-                    tickShape: tickShape,
-                    tooltipShape: tooltipShape,
-                    tooltipTextFormatterCallback: tooltipTextFormatterCallback,
-                    trackShape: trackShape,
-                      ),
+              inactiveLabelStyle: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontFamily: fontFamily,
+                  fontSize: 9.sp,
+                  color: gray_color_1
+              ),
+              tooltipTextStyle: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontFamily: fontFamily,
+                  fontSize: 9.sp,
+                  color: new_black_color
+              ),
+              tooltipBackgroundColor: hex("4B465C").shade900.withOpacity(0.3),
+            ),
+            child: SizedBox(
+              width: width,
+              height: height,
+              child: SliderTheme(
+                data: SliderTheme.of(Get.context!).copyWith(
+                  overlayShape: SliderComponentShape.noThumb,
+                  trackHeight: 1,
                 ),
+                child: SfSlider(
+                        value: value,
+                        min: min,
+                        max: max,
+
+                        showTicks:showTicks,
+                        showLabels:showLabels,
+                        onChanged: onChanged,
+                        stepSize: stepSize,
+                        stepDuration: stepDuration,
+                        interval: interval,
+                        thumbShape: thumbShape,
+                        inactiveColor: inactiveColor,
+                        activeColor: activeColor,
+                        dateFormat: dateFormat,
+                        dateIntervalType: dateIntervalType,
+                        edgeLabelPlacement: EdgeLabelPlacement.auto,
+                      enableTooltip: enableTooltip,
+                      numberFormat: numberFormat,
+                     dividerShape: dividerShape,
+                      labelFormatterCallback: labelFormatterCallback,
+                      labelPlacement: labelPlacement,
+                      minorTicksPerInterval: minorTicksPerInterval,
+                      semanticFormatterCallback: semanticFormatterCallback,
+                      overlayShape: overlayShape,
+                      shouldAlwaysShowTooltip: shouldAlwaysShowTooltip,
+                      showDividers: showDividers,
+                      thumbIcon: thumbIcon,
+                      tickShape: tickShape,
+                      tooltipShape: tooltipShape,
+                      tooltipTextFormatterCallback: tooltipTextFormatterCallback,
+                      trackShape: trackShape,
+                    ),
               ),
             ),
-              ),
-
           ),
-        ],
-    ),
+            ),
+
+        ),
+      ],
   );
 }
 

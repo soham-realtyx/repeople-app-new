@@ -1424,7 +1424,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   cntDash.openContainer.value == true ? Container() : siteVisitTheme(false),
                   SizedBox(height: 22.h),
                   cntDash.openContainer.value == true ? Container() : Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
                     child: submitButton(),
                   )
                 ],

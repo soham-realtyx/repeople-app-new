@@ -36,18 +36,19 @@ class _FullImageViewState extends State<FullImageViewPage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.TRANSPARENT,
+          title: Text(capitalizeFirstLetter(widget.title??""),style: semiBoldTextStyle(fontSize: 16,txtColor: AppColors.white_color)),
+          centerTitle: false,
           leading: IconButton(
             padding: EdgeInsets.all(0),
             onPressed: (){
               Get.back();
             },
+
             icon: Icon(Icons.arrow_back,color: white,size: 25),
             splashColor: AppColors.TRANSPARENT,
             highlightColor:AppColors.TRANSPARENT,
             hoverColor: AppColors.TRANSPARENT,
           ),
-          title: Text(capitalizeFirstLetter(widget.title??""),style: semiBoldTextStyle(fontSize: 16,txtColor: AppColors.WHITE)),
-          centerTitle: false,
         ),
         backgroundColor: AppColors.BLACK,
         body: Stack(

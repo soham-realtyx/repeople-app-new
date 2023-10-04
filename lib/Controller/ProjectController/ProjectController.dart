@@ -233,7 +233,7 @@ class ProjectController extends GetxController {
   onNavigatornew(ProjectListModal obj) async {
     var result = await Get.to(
       ProjectDetails(projectid: obj.sId.toString()),
-      duration: Duration(milliseconds: 0),
+      duration: const Duration(milliseconds: 1),
     );
     print('result');
     print(result);

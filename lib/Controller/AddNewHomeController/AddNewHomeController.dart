@@ -536,6 +536,7 @@ ClearData(){
     if(selectedtype==PropertyType.BUILDING){
       data['unitdetails'] = jsonEncode(obj_unit.toJson()).toString();
     }
+
     var headerdata = {
       'userlogintype': sp.getString(SESSION_USERLOGINTYPE)??"",
     };

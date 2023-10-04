@@ -61,7 +61,7 @@ class _AddNewMembersPageState extends State<AddNewMembersPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 70),
+                  const SizedBox(height: 70),
 
                   AddNewMembersFormData(),
 

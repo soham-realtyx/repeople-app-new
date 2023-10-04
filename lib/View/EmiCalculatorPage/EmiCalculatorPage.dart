@@ -195,7 +195,7 @@ class _EmiCalculatorPageState extends State<EmiCalculatorPage> {
   Widget emiCalculate() {
     return
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 0.0,horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(vertical: 0.0,horizontal: 0.0),
         child: Container(
           margin: const EdgeInsets.only(top: 0, bottom: 15),
           child: Column(
@@ -209,10 +209,44 @@ class _EmiCalculatorPageState extends State<EmiCalculatorPage> {
                     max: 30000000,
                     min: 0,
                     enableTooltip: true,
-                    showTicks: false,
-                    showLabels: false,
+                      showLabels: true,
+                    showTicks: true,
                     tooltipShape: const SfPaddleTooltipShape(),
-                    interval: 10000,
+                    interval: 3000000,
+                    thumbIcon: CustomTooltip(value: cntEmiController.amountProgress.value),
+                    labelPlacement: LabelPlacement.onTicks,
+                    labelFormatterCallback: (value, formattedText) {
+                      if(value == 0){
+                        return '0';
+                      }else if(value == 3000000){
+                        return '30 Lac';
+                      }else if(value == 6000000){
+                        return '60 Lac';
+                      }else if(value == 9000000){
+                        return '90 Lac';
+                      }else if(value == 12000000){
+                        return '1.2 Cr';
+                      }else if(value == 15000000){
+                        return '1.5 Cr';
+                      }else if(value == 18000000){
+                        return '1.8 Cr';
+                      }else if(value == 21000000){
+                        return '2.1 Cr';
+                      }else if(value == 24000000){
+                        return '2.4 Cr';
+                      }else if(value == 27000000){
+                        return '2.7 Cr';
+                      }else if(value == 30000000){
+                        return '3.0 Cr';
+                      }else{
+                        return '';
+                      }
+                    },
+                    stepSize: 0,
+                    // tooltipTextFormatterCallback: (actualValue, formattedText) {
+                    //   return '${(actualValue / 10000000).toStringAsFixed(1)} cr';
+                    // },
+                    minorTicksPerInterval: 0,
                     onChanged: (value) {
                       if(value==0){
                         cntEmiController.Emi.value="0";
@@ -223,7 +257,6 @@ class _EmiCalculatorPageState extends State<EmiCalculatorPage> {
                       cntEmiController.amountProgress.value = value;
                       cntEmiController.emiCalculation();
                     },
-                    // numberFormat: NumberFormat(getIndianCurrencyInShorthand(amount: 30000000)),
                     edit_option: true,
                     editwidget: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 8),
@@ -246,6 +279,7 @@ class _EmiCalculatorPageState extends State<EmiCalculatorPage> {
                     ),
                   ),
                 )),
+
 
                 const SizedBox(height: 10,),
 
@@ -342,5 +376,26 @@ class _EmiCalculatorPageState extends State<EmiCalculatorPage> {
         ),
       );
 
+  }
+}
+
+class CustomTooltip extends StatelessWidget {
+  final double value;
+
+  CustomTooltip({required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(10.0), // Customize the tooltip shape border radius
+      ),
+      padding: EdgeInsets.all(8.0),
+      child: Text(
+        value.toStringAsFixed(1),
+        style: TextStyle(color: Colors.white),
+      ),
+    );
   }
 }

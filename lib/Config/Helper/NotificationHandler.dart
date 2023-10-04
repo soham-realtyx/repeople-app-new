@@ -95,7 +95,6 @@ class NotificationHandler {
 
     Map<String , dynamic> data = message.data;
 
-
     if (Platform.isIOS) {
       if (message.notification?.apple?.imageUrl != null &&
           message.notification?.apple?.imageUrl != "") {
@@ -199,7 +198,6 @@ class NotificationHandler {
 
   }
   Future<Uint8List> _getByteArrayFromUrl(String url) async {
-
     dio.Options options = dio.Options(responseType: dio.ResponseType.bytes);
     dio.Dio d = dio.Dio();
     dio.Response response = await d.getUri(Uri.parse(url),options: options);

@@ -54,6 +54,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
   void initState() {
     super.initState();
     cntProjectDetails.ProjectId.value = widget.projectid;
+    BottomNavigationBarClass().selectedIndex=1;
     var keyboardVisibilityController = KeyboardVisibilityController();
     // Query
     print(
@@ -110,7 +111,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBarClass(),
+      // bottomNavigationBar: BottomNavigationBarClass(),
     );
   }
 

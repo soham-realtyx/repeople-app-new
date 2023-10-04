@@ -209,6 +209,7 @@ class _MyPropertiesDetailsPageState extends State<MyPropertiesDetailsPage> {
                                 onTap: () {
                                   Get.to(
                                     FullImageViewPage(
+
                                         list: cntMyProperties.galleryList,
                                         index: index2),
                                   );
@@ -791,6 +792,8 @@ class _MyPropertiesDetailsPageState extends State<MyPropertiesDetailsPage> {
             onTap: () {
               Get.to(
                 FullImageViewPage(
+                    title: cntMyProperties.arrPropertiesDetailsList[0]
+                        .siteProgress?.SiteProgressListdata?[index].sitename,
                     list: cntMyProperties.siteProgressList, index: index),
               );
             },
