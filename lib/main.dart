@@ -46,7 +46,7 @@ Future<void> myBackgroundHandler(RemoteMessage message) async {
   }
 
 }
-final tag = "MoeRepeople_";
+const tag = "MoeRepeople_";
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -71,7 +71,6 @@ void main() async {
   await UserSimplePreference.init();
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   initlizeLink();
-
   runApp(MyApp());
   FlutterError.onError = (flutterdetails)=>FirebaseCrashlytics.instance.recordFlutterError(flutterdetails);
   //FirebaseCrashlytics.instance.crash();
@@ -86,7 +85,7 @@ Future<void> initlizeLink() async {
 
   // isLogin = sp.getBool(ISLOGIN) ?? false;
 
-  var event;
+  String event;
   stream = linkStream.listen((eventtemp) async {
     print("event ==================== $eventtemp");
     if (eventtemp != "" && eventtemp != null) {

@@ -96,7 +96,6 @@ class DashboardHeaderController extends GetxController{
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
         child: Container(
-          //color: APP_GRAY_COLOR,
           height: 70.w,
           width: Get.width,
           alignment: Alignment.center,
@@ -104,12 +103,6 @@ class DashboardHeaderController extends GetxController{
               color: Colors.white.withOpacity(0.0),
               boxShadow: [
                 fullcontainerboxShadow
-                // BoxShadow(
-                //     color: Colors.black.withOpacity(0.03),
-                //     blurRadius: 4,
-                //     offset: Offset(0,5),
-                //     spreadRadius: 1
-                // )
               ]
           ),
           child: SafeArea(

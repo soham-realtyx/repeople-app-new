@@ -155,7 +155,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                                       "",
                                   fit: BoxFit.cover,
                                   errorWidget: (context, url, error) {
-                                    return SvgPicture.network(
+                                    return Image.network(
                                       cntProjectDetails
                                               .obj_svprojectdetails
                                               .value
@@ -214,7 +214,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                                                 height: 84.w,
                                                 radius: 10),
                                         errorWidget: (context, url, error) {
-                                          return SvgPicture.network(
+                                          return Image.network(
                                               cntProjectDetails
                                               .obj_svprojectdetails.value.featureimg
                                               .toString(),
@@ -1025,7 +1025,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                                           "",
                                       fit: BoxFit.fill,
                                       errorWidget: (context, url, error) {
-                                        return SvgPicture.network(
+                                        return Image.network(
                                             cntProjectDetails
                                                 .obj_svprojectdetails
                                                 .value
@@ -1119,6 +1119,17 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     .overview![indx].data1![index1].image
                     .toString(),
                 fit: BoxFit.cover,
+                errorWidget: (context, url, error) {
+                  return Image.network(
+                      cntProjectDetails.obj_svprojectdetails.value
+                          .overview![indx].data1![index1].image
+                          .toString(),
+                      height: 107.w,
+                      width: 190.w,
+                      fit: BoxFit.fill
+                    // height: 20, width: 20
+                  );
+                },
               ))),
     );
   }
@@ -1191,7 +1202,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                                   height: 185.h, width: Get.width, radius: 6);
                             },
                             errorWidget: (context, url, error) {
-                              return SvgPicture.network(
+                              return Image.network(
                                 cntProjectDetails.obj_svprojectdetails.value
                                         .locationimg ??
                                     "",
@@ -1334,7 +1345,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                             "",
                         fit: BoxFit.cover,
                         errorWidget: (context, url, error) {
-                          return Image.asset(
+                          return Image.network(
                             cntProjectDetails.obj_svprojectdetails.value.gallery
                                     ?.gallerydata?[index].icon ??
                                 "",
@@ -1858,7 +1869,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
 
     return SizedBox(
         width: double.infinity,
-        child: FutureBuilder(
+        child:  Obx(() =>FutureBuilder(
           builder: (_, snapshot) {
             if (snapshot.connectionState == ConnectionState.done &&
                 !snapshot.hasError &&
@@ -1892,7 +1903,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                               color: BORDER_GREY,
                             ),
                           ),
-                          Obx(() => SizedBox(
+                          SizedBox(
                                 height: 40,
                                 child: Padding(
                                     padding: const EdgeInsets.only(
@@ -1944,7 +1955,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                                             ));
                                       }).toList(),
                                     )),
-                              )),
+                              ),
                         ],
                       ),
                     ),
@@ -1961,7 +1972,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
             }
           },
           future: cntProjectDetails.futureProjectdetailsData.value,
-        ));
+        )));
   }
 
   Widget planLayoutBlock() {
@@ -2174,7 +2185,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                         "",
                     fit: BoxFit.fill,
                     errorWidget: (context, url, error) {
-                      return SvgPicture.network(
+                      return Image.network(
                         cntProjectDetails.obj_svprojectdetails.value.highlight
                                 ?.highlightsdata?[index].highlighticon ??
                             "",

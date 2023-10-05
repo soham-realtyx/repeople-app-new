@@ -34,7 +34,7 @@ class CustomDetailsAppBar extends StatefulWidget {
   List<Widget>? trillingWidget;
 
   CustomDetailsAppBar(
-      {required this.title,
+      {super.key, required this.title,
       required this.height,
       this.leadingWidget,
       this.trillingWidget,

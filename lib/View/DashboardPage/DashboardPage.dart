@@ -1379,58 +1379,48 @@ class _DashboardPageState extends State<DashboardPage> {
       physics: const ScrollPhysics(),
       child: Column(
         children: [
-          Column(
-            children: [
-              Column(
-                children: [
-                  SizedBox(height: 30.h),
-                  SvgPicture.asset(
-                    IMG_BOOK_A_SITE_SVG,
-                    height: 173.h,
-                    width: 173.w,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(height: 12.w),
-                  SizedBox(
-                    width: 260,
-                    child: Text(
-                        lblBookASiteText,
-                        maxLines: 2,
-                        textAlign: TextAlign.center,
-                        style:
-                        TextStyle(
-                          fontSize: 12.sp,
-                          color: HexColor("#333333"),
-                          fontWeight: FontWeight.w500,
-                          fontFamily: fontFamily,
-
-                        )
-                    ),
-                  ),
-                  SizedBox(height: 20.w),
-
-                  OnBookSiteVisitButton(
-                      height: 32.w,
-                      width: 135.w,
-                      onTap: (){
-                        cntDash.openContainer.value = !cntDash.openContainer.value;
-                      },
-                      decoration: CustomDecorations()
-                          .backgroundlocal(APP_THEME_COLOR, 6, 0, APP_THEME_COLOR),
-                      text: lblBookASiteText2,
-                      icon: Image.asset(cntDash.openContainer.value == true ?UP_ARROW_IMAGE:DOWN_ARROW_IMAGE,width: 12,height: 15,color: AppColors.WHITE),
-                      style: TextStyle(color : white, fontSize: 10.sp,fontFamily: fontFamily, fontWeight: FontWeight.w500)),
-
-                  cntDash.openContainer.value == true ? Container() : siteVisitTheme(false),
-                  SizedBox(height: 22.h),
-                  cntDash.openContainer.value == true ? Container() : Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: submitButton(),
-                  )
-                ],
-              ),
-            ],
+          SizedBox(height: 30.h),
+          SvgPicture.asset(
+            IMG_BOOK_A_SITE_SVG,
+            height: 173.h,
+            width: 173.w,
+            fit: BoxFit.cover,
           ),
+          SizedBox(height: 12.w),
+          SizedBox(
+            width: 260,
+            child: Text(
+                lblBookASiteText,
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12.sp,
+                  color: HexColor("#333333"),
+                  fontWeight: FontWeight.w500,
+                  fontFamily: fontFamily,
+                )
+            ),
+          ),
+          SizedBox(height: 20.w),
+
+          OnBookSiteVisitButton(
+              height: 32.w,
+              width: 135.w,
+              onTap: (){
+                cntDash.openContainer.value = !cntDash.openContainer.value;
+              },
+              decoration: CustomDecorations()
+                  .backgroundlocal(APP_THEME_COLOR, 6, 0, APP_THEME_COLOR),
+              text: lblBookASiteText2,
+              icon: Image.asset(cntDash.openContainer.value == true ?UP_ARROW_IMAGE:DOWN_ARROW_IMAGE,width: 12,height: 15,color: AppColors.WHITE),
+              style: TextStyle(color : white, fontSize: 10.sp,fontFamily: fontFamily, fontWeight: FontWeight.w500)),
+
+          cntDash.openContainer.value == true ? Container() : siteVisitTheme(false),
+          SizedBox(height: 22.h),
+          cntDash.openContainer.value == true ? Container() : Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: submitButton(),
+          )
         ],
       ),
     );

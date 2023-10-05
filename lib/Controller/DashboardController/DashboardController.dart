@@ -952,7 +952,7 @@ class DashboardController extends GetxController {
                         placeholderFadeInDuration: Duration.zero,
                         imageUrl: arrRefferInfo[index].icon??"",
                         errorWidget: (context, url, error) {
-                          return SvgPicture.network(
+                          return Image.network(
                               arrRefferInfo[index].icon??"",
                               width: 35, height: 35, fit: BoxFit.cover
                           );
